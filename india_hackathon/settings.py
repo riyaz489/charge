@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import datetime
 
-import yaml
 from django.conf import settings
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,12 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-if 'SECRET' in os.environ:
-    SECRET_KEY = os.environ['SECRET']
-else:
-    a_yaml_file = open("secrets.yaml")
-    parsed_yaml_file = yaml.load(a_yaml_file, Loader=yaml.FullLoader)
-    SECRET_KEY = parsed_yaml_file['project_secret']
+SECRET_KEY = os.environ['SECRET']
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
