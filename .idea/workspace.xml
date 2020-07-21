@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/india_hackathon/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/india_hackathon/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +34,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.manage">
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -189,6 +191,10 @@
     <state width="1253" height="210" key="GridCell.Tab.1.right/67.27.1299.741/1366.0.1600.900@67.27.1299.741" timestamp="1595324499369" />
     <state width="1253" height="516" key="GridCell.Tab.1.right/67.27.1299.741@67.27.1299.741" timestamp="1594892406657" />
     <state width="1253" height="407" key="GridCell.Tab.1.right/67.27.2899.873@67.27.2899.873" timestamp="1594910404069" />
+    <state x="205" y="31" key="SettingsEditor" timestamp="1595341049389">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="205" y="31" key="SettingsEditor/67.27.1299.741/1366.0.1600.900@67.27.1299.741" timestamp="1595341049389" />
     <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1595317900279">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
