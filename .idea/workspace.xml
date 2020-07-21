@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0a5c24f3-2a46-411c-8ed7-267c9186e653" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.ebextensions/django.config" beforeDir="false" afterPath="$PROJECT_DIR$/.ebextensions/django.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/india_hackathon/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/india_hackathon/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,10 +114,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="174" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1594569826587" />
-    <state x="398" y="201" width="626" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595334405968">
+    <state x="398" y="201" width="626" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595343422436">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="398" y="201" width="626" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1299.741/1366.0.1600.900@67.27.1299.741" timestamp="1595334405968" />
+    <state x="398" y="201" width="626" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1299.741/1366.0.1600.900@67.27.1299.741" timestamp="1595343422436" />
     <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595342020407">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -221,6 +223,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1594552725880" />
+    <state x="441" y="310" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1595343455288">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="441" y="310" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/67.27.1299.741/1366.0.1600.900@67.27.1299.741" timestamp="1595343455288" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
