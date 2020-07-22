@@ -45,10 +45,11 @@ def registration_view(request):
 				res["statusMessage"] = temp
 				return Response(res, status=status.HTTP_200_OK)
 	except Exception as e:
+		print(e)
 		return Response({
 			'status': 'FAILURE',
 			'statusCode': status.HTTP_500_INTERNAL_SERVER_ERROR,
-			'statusMessage': 'some internal server error occured'})
+			'statusMessage': 'some internal server error occured'+ str(e)})
 
 
 @api_view(['POST', ])
