@@ -11,7 +11,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from django.shortcuts import get_object_or_404
 from apps.account.models import Account, AccountSubscriber
-from apps.account.api.document import BlogUserDocument
+# from apps.account.api.document import BlogUserDocument
 from elasticsearch_dsl.query import Q
 
 
@@ -229,34 +229,34 @@ class UserProfileView(RetrieveAPIView):
 		# result = temp.blog_data.all().filter(type='HEADING').order_by('position')
 
 
-@api_view(['GET', ])
-@permission_classes([IsAuthenticated, ])
-def search(request):
-	try:
-		q = request.GET.get('q')
-		current_user = request.user
-		data = []
-		if q:
-			data = []
-			user = BlogUserDocument.search().query(Q("prefix", username=q)|Q("prefix", email=q))
-			for u in user:
-				following_user = Account.objects.get(pk=u.id)
-				temp = AccountSubscriber.objects.filter(current_account=current_user, following_account=following_user)
-				is_following = False
-				if temp:
-					is_following = True
-				data.append({'image': u.image, 'username': u.username, 'is_following': is_following, 'email': u.email})
-		return Response({
-			'status': 'SUCCESS',
-			'statusCode': status.HTTP_200_OK,
-			'statusMessage': 'users fetched successfully!',
-			'response': data
-		})
-	except Exception as e:
-		return Response({
-			'status': 'FAILURE',
-			'statusCode': status.HTTP_500_INTERNAL_SERVER_ERROR,
-			'statusMessage': 'some internal server error occured'})
+# @api_view(['GET', ])
+# @permission_classes([IsAuthenticated, ])
+# def search(request):
+# 	try:
+# 		q = request.GET.get('q')
+# 		current_user = request.user
+# 		data = []
+# 		if q:
+# 			data = []
+# 			user = BlogUserDocument.search().query(Q("prefix", username=q)|Q("prefix", email=q))
+# 			for u in user:
+# 				following_user = Account.objects.get(pk=u.id)
+# 				temp = AccountSubscriber.objects.filter(current_account=current_user, following_account=following_user)
+# 				is_following = False
+# 				if temp:
+# 					is_following = True
+# 				data.append({'image': u.image, 'username': u.username, 'is_following': is_following, 'email': u.email})
+# 		return Response({
+# 			'status': 'SUCCESS',
+# 			'statusCode': status.HTTP_200_OK,
+# 			'statusMessage': 'users fetched successfully!',
+# 			'response': data
+# 		})
+# 	except Exception as e:
+# 		return Response({
+# 			'status': 'FAILURE',
+# 			'statusCode': status.HTTP_500_INTERNAL_SERVER_ERROR,
+# 			'statusMessage': 'some internal server error occured'})
 
 
 

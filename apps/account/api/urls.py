@@ -7,7 +7,7 @@ from apps.account.api.views import(
 	add_profile_image,
 	change_subscribe_relation_status,
 	check_follow_status,
-	search
+	# search
 )
 
 
@@ -20,6 +20,6 @@ urlpatterns = [
 	url(r'^profile', UserProfileView.as_view()),
 	path('relation', change_subscribe_relation_status, name='change relation status'),
 	path('follow/status/<int:pk>', check_follow_status, name='follow status'),
-	path('search', search, name='search')
+	# path('search', search, name='search')
 
 ]

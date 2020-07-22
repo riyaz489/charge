@@ -47,15 +47,15 @@ INSTALLED_APPS = [
     'corsheaders',
     'apps.category',
     'apps.blog',
-    'django_elasticsearch_dsl'
+    # 'django_elasticsearch_dsl'
 
 ]
 
-ELASTICSEARCH_DSL = {
-    'default': {
-        'hosts': 'localhost:9200'
-    }
-}
+# ELASTICSEARCH_DSL = {
+#     'default': {
+#         'hosts': 'localhost:9200'
+#     }
+# }
 
 AUTH_USER_MODEL = 'account.Account'
 REST_FRAMEWORK = {
