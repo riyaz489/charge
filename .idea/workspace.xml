@@ -4,6 +4,10 @@
     <list default="true" id="0a5c24f3-2a46-411c-8ed7-267c9186e653" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.ebextensions/django.config" beforeDir="false" afterPath="$PROJECT_DIR$/.ebextensions/django.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/api/document.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/account/api/document.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/account/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/account/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/india_hackathon/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/india_hackathon/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,11 +201,11 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="31" key="SettingsEditor/67.27.1299.741/1366.0.1600.900@67.27.1299.741" timestamp="1595341049389" />
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1595317900279">
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1595482789603">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="1742" y="239" key="com.intellij.ide.util.TipDialog/67.27.1299.741/1366.0.1600.900@1366.0.1600.900" timestamp="1595253715717" />
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741/1366.0.1600.900@67.27.1299.741" timestamp="1595317900279" />
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741/1366.0.1600.900@67.27.1299.741" timestamp="1595482789603" />
     <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1595247260888" />
     <state x="1763" y="0" width="857" height="699" maximized="true" key="dock-window-1" timestamp="1595067786551">
       <screen x="1366" y="0" width="1600" height="900" />

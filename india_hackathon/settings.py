@@ -115,6 +115,7 @@ if 'RDS_DB_NAME' in os.environ:
             'PORT': os.environ['RDS_PORT'],
         }
     }
+    print('working on RDS database')
 else:
     DATABASES = {
         'default': {
@@ -125,6 +126,7 @@ else:
             },
         }
     }
+    print('working on ec2 local database')
 
 
 # Password validation
