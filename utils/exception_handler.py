@@ -4,6 +4,8 @@ from rest_framework import status
 
 def custom_exception_handler(exc, context):
     response = exception_handler(exc, context)
+    print(exec)
+    print(context)
     temp = {}
     if response is not None:
         temp["status"] = "FAILURE"

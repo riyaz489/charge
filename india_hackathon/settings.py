@@ -28,9 +28,10 @@ SECRET_KEY = os.environ['SECRET']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
-ALLOWED_HOSTS = ['charge.us-east-1.elasticbeanstalk.com']
-
+if 'RDS_DB_NAME' in os.environ:
+    ALLOWED_HOSTS = ['charge.us-east-1.elasticbeanstalk.com',]
+else:
+    ALLOWED_HOSTS = ['*', ]
 
 # Application definition
 
@@ -47,15 +48,15 @@ INSTALLED_APPS = [
     'corsheaders',
     'apps.category',
     'apps.blog',
-    # 'django_elasticsearch_dsl'
+    'django_elasticsearch_dsl'
 
 ]
 
-# ELASTICSEARCH_DSL = {
-#     'default': {
-#         'hosts': 'localhost:9200'
-#     }
-# }
+ELASTICSEARCH_DSL = {
+    'default': {
+        'hosts': 'localhost:9200'
+    }
+}
 
 AUTH_USER_MODEL = 'account.Account'
 REST_FRAMEWORK = {
