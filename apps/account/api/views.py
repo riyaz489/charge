@@ -3,7 +3,7 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.parsers import JSONParser
 from rest_framework.permissions import AllowAny
 from apps.account.api.serializers import RegistrationSerializer, UserLoginSerializer, BlogsListSerilizer,\
-	UserProfleSerializer
+	UserProfleSerializer, ResetPasswordSerilizer
 from rest_framework import status
 from rest_framework.generics import RetrieveAPIView
 from rest_framework.response import Response
@@ -13,6 +13,8 @@ from django.shortcuts import get_object_or_404
 from apps.account.models import Account, AccountSubscriber
 from apps.account.api.document import BlogUserDocument
 from elasticsearch_dsl.query import Q
+from django.core.mail import send_mail
+from django.core.mail import EmailMultiAlternatives
 
 
 FOLLOW = 'FOLLOW'
@@ -263,4 +265,87 @@ def search(request):
 
 
 
+@api_view(['POST', ])
+@permission_classes([AllowAny, ])
+def reset_password(request):
+	try:
+
+
+
+		res = {}
+		url = request.get_host()+"/update_password"
+		serializer = ResetPasswordSerilizer(data=request.data)
+		if serializer.is_valid():
+
+			res = {
+				'status': 'SUCCESS',
+				'statusCode': '200',
+				'statusMessage': 'link sent successfully to email',
+				'response': {'next_url': url}
+			}
+
+			body = "<!DOCTYPE html>		<html>			<head>						<title>Forget Password Email</title>" \
+				   "		</head>		<body>	<div>			<h3>Dear "+ serializer.data['username'] +",</h3>" \
+				   "		<p>You requested for a password reset, kindly use this password to login: <b style='color:red;'>"+ str(serializer.data['password'])+ \
+				   " </b> to reset your password</p><br> <p>Cheers!</p>	</div>   	</body>	</html>	"
+
+			msg = EmailMultiAlternatives(subject='Reset charge password',
+										from_email=	'chargeapplication@gmail.com',
+										to=['riyaz489.rk@gmail.com', ])
+			msg.attach_alternative(body, 'text/html')
+			msg.send(fail_silently=False)
+
+		else:
+			data = serializer.errors
+			res['statusCode'] = '400'
+			res["status"] = "FAILURE"
+			temp = ''
+			for d in list(data.values())[0]:
+				temp += str(d)
+			res["statusMessage"] = temp
+
+		return Response(res, status=status.HTTP_200_OK)
+
+	except Exception as e:
+		print(e)
+		return Response({
+			'status': 'FAILURE',
+			'statusCode': status.HTTP_500_INTERNAL_SERVER_ERROR,
+			'statusMessage': 'some internal server error occured'})
+
+
+
+
+@api_view(['PUT', ])
+@permission_classes([IsAuthenticated, ])
+def update_password(request):
+	try:
+		user_profile = request.user
+		data = JSONParser().parse(request)
+		if not all(key in data for key in ['password', 'confirm password']):
+			raise Http404("'password' and 'confirm password' field is needed in request body")
+		req = {'password': data['password']}
+		serializer = UserProfleSerializer(user_profile, data=req, partial=True)
+		if serializer.is_valid():
+			serializer.save()
+			return Response({
+				'status': 'SUCCESS',
+				'statusCode': status.HTTP_200_OK,
+				'statusMessage': 'password changed successfully!',
+				'response': []})
+		temp = ''
+		for key, value in serializer.errors.items():
+			for v in value:
+				temp += str(key) + ': ' + str(v) + ', '
+		return Response({'status': 'FAILURE', 'statusCode': status.HTTP_400_BAD_REQUEST, 'statusMessage': temp})
+
+	except Exception as e:
+		print(e)
+		if isinstance(e, Http404):
+			raise Http404(str(e))
+
+		return Response({
+			'status': 'FAILURE',
+			'statusCode': status.HTTP_500_INTERNAL_SERVER_ERROR,
+			'statusMessage': 'some internal server error occured'})
 

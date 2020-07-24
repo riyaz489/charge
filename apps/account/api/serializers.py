@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from apps.account.models import Account, AccountSubscriber
-
+from utils.manage_pass import generate_pass
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import update_last_login
 from rest_framework_jwt.settings import api_settings
@@ -10,6 +10,9 @@ from apps.blog.api.serializers import BlogsThumbSerializer
 JWT_PAYLOAD_HANDLER = api_settings.JWT_PAYLOAD_HANDLER
 JWT_ENCODE_HANDLER = api_settings.JWT_ENCODE_HANDLER
 
+
+from rest_framework_jwt.utils import jwt_decode_handler
+from rest_framework_jwt.views import verify_jwt_token
 
 class UserLoginSerializer(serializers.Serializer):
     email = serializers.CharField(max_length=255)
@@ -98,3 +101,37 @@ class BlogsListSerilizer(serializers.ModelSerializer):
     # def get_blogs_data(self, obj):
     #     followers_queryset =  # get queryset of followers
     #     return BlogsThumbSerializer(followers_queryset, many=True).data
+
+
+class ResetPasswordSerilizer(serializers.Serializer):
+    email = serializers.CharField(max_length=255)
+    id = serializers.IntegerField(read_only=True)
+    password = serializers.CharField(max_length=200, read_only=True)
+    username = serializers.CharField(max_length=255, read_only=True)
+
+
+    def validate(self, data):
+        email = data.get("email", None)
+
+        if not Account.objects.filter(email=email).exists():
+            raise serializers.ValidationError(
+                'A user with this email not found.'
+            )
+        try:
+            user = Account.objects.get(email=email)
+            new_pass = generate_pass()
+            # setting new random password
+            user.set_password(new_pass)
+            user.save()
+
+        except Account.DoesNotExist:
+            raise serializers.ValidationError(
+                'User with given email does not exists'
+            )
+        print(user.username)
+        return {
+            'email': user.email,
+            'password': new_pass,
+            'id': user.id,
+            'username': user.username
+        }

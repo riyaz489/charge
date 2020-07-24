@@ -29,7 +29,7 @@ SECRET_KEY = os.environ['SECRET']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 if 'RDS_DB_NAME' in os.environ:
-    ALLOWED_HOSTS = ['charge.us-east-1.elasticbeanstalk.com',]
+    ALLOWED_HOSTS = ['ec2-107-23-247-204.compute-1.amazonaws.com',]
 else:
     ALLOWED_HOSTS = ['*', ]
 
@@ -51,6 +51,14 @@ INSTALLED_APPS = [
     'django_elasticsearch_dsl'
 
 ]
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'chargeapplication@gmail.com'
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_PASS']
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 
 ELASTICSEARCH_DSL = {
     'default': {

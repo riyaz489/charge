@@ -10,7 +10,10 @@ def custom_exception_handler(exc, context):
     if response is not None:
         temp["status"] = "FAILURE"
         temp['status_code'] = response.status_code
-        temp['statusMessage'] = response.data['detail']
+        if exc:
+            temp['statusMessage'] = str(exc)
+        else:
+            temp['statusMessage'] = response.data['detail']
 
         response.data = temp
         response.status_code = status.HTTP_200_OK
