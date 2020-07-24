@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a5c24f3-2a46-411c-8ed7-267c9186e653" name="Default Changelist" comment="" />
+    <list default="true" id="0a5c24f3-2a46-411c-8ed7-267c9186e653" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/india_hackathon" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.ebextensions" />
     <property name="settings.editor.selected.configurable" value="Erlang External Tools" />
   </component>
   <component name="RunManager" selected="Python.manage">
@@ -156,11 +158,11 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="206" y="58" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595563726460">
+    <state x="206" y="58" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595565375327">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="174" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1594569826587" />
-    <state x="206" y="58" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1299.741/1366.0.1600.900@67.27.1299.741" timestamp="1595563726460" />
+    <state x="206" y="58" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1299.741/1366.0.1600.900@67.27.1299.741" timestamp="1595565375327" />
     <state x="398" y="201" width="626" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595343422436">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
