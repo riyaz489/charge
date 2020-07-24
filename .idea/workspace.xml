@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a5c24f3-2a46-411c-8ed7-267c9186e653" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.ebextensions/django.config" beforeDir="false" afterPath="$PROJECT_DIR$/.ebextensions/django.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql.cnf" beforeDir="false" afterPath="$PROJECT_DIR$/sql.cnf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,17 +257,17 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="31" key="SettingsEditor/67.27.1299.741/1366.0.1600.900@67.27.1299.741" timestamp="1595484571765" />
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1595562300706">
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1595575456262">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="1742" y="239" key="com.intellij.ide.util.TipDialog/67.27.1299.741/1366.0.1600.900@1366.0.1600.900" timestamp="1595253715717" />
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741/1366.0.1600.900@67.27.1299.741" timestamp="1595562300706" />
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741/1366.0.1600.900@67.27.1299.741" timestamp="1595575456262" />
     <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1595526580704" />
-    <state x="1699" y="0" width="970" height="181" maximized="true" key="dock-window-1" timestamp="1595515831323">
+    <state x="1612" y="467" width="1030" height="282" maximized="true" key="dock-window-1" timestamp="1595575401009">
       <screen x="1366" y="0" width="1600" height="900" />
     </state>
     <state x="1505" y="0" width="885" height="511" maximized="true" key="dock-window-1/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1594538078198" />
-    <state x="1699" y="0" width="970" height="181" maximized="true" key="dock-window-1/67.27.1299.741/1366.0.1600.900@67.27.1299.741" timestamp="1595515831323" />
+    <state x="1612" y="467" width="1030" height="282" maximized="true" key="dock-window-1/67.27.1299.741/1366.0.1600.900@67.27.1299.741" timestamp="1595575401009" />
     <state x="1715" y="31" width="965" height="662" maximized="true" key="dock-window-1/67.27.2899.873@67.27.2899.873" timestamp="1594902303956" />
     <state x="1571" y="0" width="1253" height="463" maximized="true" key="dock-window-2" timestamp="1595069042213">
       <screen x="1366" y="0" width="1600" height="900" />

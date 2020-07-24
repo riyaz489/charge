@@ -21,7 +21,7 @@
 !includedir /etc/mysql/mysql.conf.d/
 
 [client]
-database = user_blogs
-user = djangouser
-password = test@123
+database = user_blog
+user = root
+password =
 default-character-set = utf8
