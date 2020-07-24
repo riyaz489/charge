@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a5c24f3-2a46-411c-8ed7-267c9186e653" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.ebextensions/django.config" beforeDir="false" afterPath="$PROJECT_DIR$/.ebextensions/django.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +32,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.ebextensions" />
     <property name="settings.editor.selected.configurable" value="Erlang External Tools" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.ebextensions" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.manage">
     <configuration name="del_me" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
