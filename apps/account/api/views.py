@@ -324,6 +324,8 @@ def update_password(request):
 		data = JSONParser().parse(request)
 		if not all(key in data for key in ['password', 'confirm password']):
 			raise Http404("'password' and 'confirm password' field is needed in request body")
+		if data['password'] != data['confirm password']:
+			raise Http404("'password' and 'confirm password' didn't match ")
 		req = {'password': data['password']}
 		serializer = UserProfleSerializer(user_profile, data=req, partial=True)
 		if serializer.is_valid():
