@@ -29,7 +29,7 @@ SECRET_KEY = os.environ['SECRET']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 if 'RDS_DB_NAME' in os.environ:
-    ALLOWED_HOSTS = ['ec2-107-23-247-204.compute-1.amazonaws.com',]
+    ALLOWED_HOSTS = ['ec2-174-129-149-110.compute-1.amazonaws.com',]
 else:
     ALLOWED_HOSTS = ['*', ]
 
