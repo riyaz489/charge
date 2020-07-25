@@ -291,7 +291,7 @@ def reset_password(request):
 
 			msg = EmailMultiAlternatives(subject='Reset charge password',
 										from_email=	'chargeapplication@gmail.com',
-										to=['riyaz489.rk@gmail.com', ])
+										to=[serializer.data['email'], ])
 			msg.attach_alternative(body, 'text/html')
 			msg.send(fail_silently=False)
 
