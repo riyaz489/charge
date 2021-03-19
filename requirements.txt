@@ -20,7 +20,7 @@ django-cors-headers==3.4.0
 django-elasticsearch-dsl==7.1.4
 django-nine==0.2.3
 django-rest-auth==0.9.5
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 djangorestframework-jwt==1.11.0
 docker==4.2.2
 docker-compose==1.25.5
